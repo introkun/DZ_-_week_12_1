@@ -170,7 +170,8 @@ void processingMatrix(int mass[sizeMass][sizeMass], short line)
 	line -= 1;
 	for (int i = 1; i < sizeMass; i++)
 	{
-		int permutationsÑounter = 0;
+		// Name contains non-ASCII character
+		int permutationsÃ‘ounter = 0;
 		for (int j = 0; j < sizeMass - i; j++)
 		{
 			if (mass[line][j] < mass[line][j + 1])
@@ -178,10 +179,10 @@ void processingMatrix(int mass[sizeMass][sizeMass], short line)
 				buff = mass[line][j + 1];
 				mass[line][j + 1] = mass[line][j];
 				mass[line][j] = buff;
-				permutationsÑounter++;
+				permutationsÃ‘ounter++;
 			}
 		}
-		if (permutationsÑounter == 0)
+		if (permutationsÃ‘ounter == 0)
 		{
 			break;
 		}
